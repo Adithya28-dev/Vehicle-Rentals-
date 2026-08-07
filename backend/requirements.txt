@@ -1,0 +1,9 @@
+Flask==3.0.3
+Flask-CORS==4.0.1
+Flask-JWT-Extended==4.6.0
+Werkzeug==3.0.3
+reportlab==4.2.2
+python-dotenv==1.0.1
+requests
+Pillow==10.3.0
+supabase

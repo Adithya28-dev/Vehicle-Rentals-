@@ -1,0 +1,47 @@
+/* BookingHistory page */
+.bh-page { min-height: 100vh; padding-bottom: 60px; }
+.bh-list { display: flex; flex-direction: column; gap: 16px; }
+
+.bh-card { padding: 0; overflow: hidden; }
+.bh-card-header {
+  padding: 12px 20px;
+  background: var(--bg-card-hover);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.bh-id { font-family: 'Outfit', monospace; font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.1em; }
+
+.bh-card-body {
+  padding: 20px; display: grid; grid-template-columns: 1.5fr 2fr 1fr; gap: 20px; align-items: center;
+}
+.bh-vehicle-info { display: flex; align-items: center; gap: 16px; }
+.bh-v-icon { font-size: 2.5rem; width: 60px; height: 60px; border-radius: 12px; background: rgba(124,58,237,0.1); display: flex; align-items: center; justify-content: center; }
+.bh-v-name { font-size: 1.1rem; font-weight: 700; color: var(--text); text-decoration: none; display: block; margin-bottom: 4px; }
+.bh-v-name:hover { color: var(--primary-light); }
+.bh-v-loc { font-size: 0.8rem; color: var(--text-muted); }
+
+.bh-dates { display: flex; align-items: center; justify-content: space-between; gap: 10px; background: var(--bg); padding: 12px 20px; border-radius: 12px; border: 1px solid var(--border); }
+.bh-date-box { display: flex; flex-direction: column; gap: 2px; }
+.bh-date-lbl { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 0.05em; }
+.bh-date-val { font-size: 0.9rem; font-weight: 600; color: var(--text); }
+.bh-date-time { font-size: 0.75rem; color: var(--text-muted); }
+.bh-date-arrow { color: var(--text-dim); }
+
+.bh-payment { text-align: right; display: flex; flex-direction: column; gap: 2px; }
+.bh-pay-lbl { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 0.05em; }
+.bh-pay-val { font-size: 1.3rem; font-weight: 800; color: var(--text); margin-bottom: 4px; }
+.bh-pay-status { font-size: 0.75rem; font-weight: 600; }
+.bh-pay-status.success { color: var(--success); }
+.bh-pay-status.pending { color: var(--warning); }
+
+.bh-card-actions {
+  padding: 14px 20px;
+  background: var(--bg-card-hover);
+  border-top: 1px solid var(--border);
+  display: flex; gap: 12px; justify-content: flex-end; flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .bh-card-body { grid-template-columns: 1fr; gap: 16px; }
+  .bh-payment { text-align: left; }
+}

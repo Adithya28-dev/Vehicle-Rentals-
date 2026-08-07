@@ -1,0 +1,58 @@
+/* Vehicle List page */
+.vl-root { min-height: 100vh; padding-bottom: 60px; }
+.vl-header { margin-bottom: 28px; }
+.vl-header h1 { font-size: 2rem; font-weight: 800; color: var(--text); }
+.vl-filters {
+  display: flex; align-items: center; gap: 12px; padding: 16px 20px;
+  margin-bottom: 28px; flex-wrap: wrap;
+}
+.vl-filters .form-input { min-width: 140px; }
+.vl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+
+.vl-card { cursor: pointer; padding: 0; overflow: hidden; }
+.vl-card-img {
+  height: 160px; position: relative;
+  background: linear-gradient(135deg, rgba(124,58,237,0.1), rgba(245,158,11,0.08));
+  display: flex; align-items: center; justify-content: center;
+}
+.vl-car-icon { font-size: 5rem; filter: drop-shadow(0 8px 24px rgba(124,58,237,0.3)); }
+.vl-car-photo {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  position: absolute; top: 0; left: 0;
+  transition: transform 0.4s ease;
+}
+.vl-card:hover .vl-car-photo { transform: scale(1.06); }
+.vl-card-badges { position: absolute; top: 12px; left: 12px; display: flex; gap: 6px; flex-wrap: wrap; }
+.vl-card-body { padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+.vl-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.vl-vehicle-name { font-size: 1rem; font-weight: 700; color: var(--text); line-height: 1.3; }
+.vl-vehicle-sub { font-size: 0.78rem; color: var(--text-dim); }
+.vl-rating { font-size: 0.82rem; color: var(--gold); font-weight: 600; white-space: nowrap; }
+.vl-rating span { color: var(--text-dim); font-size: 0.72rem; }
+.vl-location { font-size: 0.78rem; color: var(--text-dim); }
+.vl-specs { display: flex; gap: 6px; flex-wrap: wrap; }
+.vl-specs span {
+  font-size: 0.72rem; padding: 3px 9px; border-radius: 6px;
+  background: var(--bg-card); color: var(--text-muted); border: 1px solid var(--border);
+}
+.vl-price-row { display: flex; align-items: center; justify-content: space-between; }
+.vl-prices { display: flex; gap: 12px; align-items: baseline; }
+.vl-price { font-size: 1.2rem; font-weight: 800; color: var(--primary-light); }
+.vl-price small { font-size: 0.72rem; font-weight: 400; color: var(--text-dim); margin-left: 2px; }
+.vl-price-day { font-size: 0.9rem; font-weight: 600; color: var(--text-muted); }
+.vl-price-day small { font-size: 0.7rem; }
+
+.vl-empty {
+  text-align: center; padding: 80px 20px;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+}
+.vl-empty span { font-size: 3rem; }
+.vl-empty h3 { font-size: 1.2rem; color: var(--text); }
+.vl-empty p { color: var(--text-muted); }
+
+@media (max-width: 768px) {
+  .vl-filters { flex-direction: column; align-items: stretch; }
+  .vl-filters .form-input { width: 100%; }
+  .vl-grid { grid-template-columns: 1fr; }
+}
